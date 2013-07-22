@@ -1,0 +1,13 @@
+{
+  "name": "sticky-footer",
+  "repo": "chameleonui/sticky-footer",
+  "description": "CSS trick to keep page footer at the bottom of the window.",
+  "version": "1.0.0",
+  "keywords": [],
+  "dependencies": {},
+  "development": {},
+  "license": "MIT",
+  "styles": [
+    "sticky-footer.styl"
+  ]
+}

@@ -1,0 +1,55 @@
+// =============================================================================
+// Sticky Footer
+// =============================================================================
+// http://www.cssstickyfooter.com/
+
+
+// =============================================================================
+// HTML Example
+// =============================================================================
+// <body>
+//    <div class="sticky-footer-body">
+//        ...page content here...
+//    </div>
+//    <div class="sticky-footer">
+//        ...footer content here...
+//    </div>
+// </body>
+
+
+
+// Variables
+// =============================================================================
+sticky-footer-height ?= 42px;
+sticky-footer-media ?= null;
+
+// Mixin
+// =============================================================================
+sticky-footer-responsive(){
+    .sticky-footer-body {
+        padding-bottom: sticky-footer-height;
+        min-height: 100%;
+    }
+    
+    .sticky-footer {
+        height: sticky-footer-height;
+        margin-top: -(sticky-footer-height);
+    }
+} 
+
+// =============================================================================
+// 
+sticky-footer(){
+
+    html, body {
+        height: 100%;
+    }
+
+    if (sticky-footer-media is not null){
+        @media sticky-footer-media {
+            sticky-footer-responsive();
+        }
+    } else {
+        sticky-footer-responsive();
+    }
+}
